@@ -24,6 +24,8 @@ const totalScore$: Observable<number> = computed(
 // totalScore$ will update whenever score.hits or score.multiplier are modified.
 ```
 
+Play with this sample code on [runkit](https://runkit.com/embed/2qv6nh3kdynk)!
+
 ## Why is it?
 
 Epoxy is designed to be the backbone of your entire app. Other reactive methodologies focus only on the UI portion of your code, leaving your business logic to use its own imperative paradigm. This inevitably leads to problems where what the user sees doesn't exactly match the underlying state of the app. Even the best code written in this manner will likely end up with a large amount of boilerplate 'adapter' logic designed to translate imperative function calls and responses into some sort of reactive format for the frontend to consume. Epoxy's solution is simple:
