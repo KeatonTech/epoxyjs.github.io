@@ -8,6 +8,8 @@ description: >-
 
 ## What is it?
 
+![](.gitbook/assets/glue-1.1-small.png)
+
 Epoxy extends the two core Javascript data structures – [Objects](untitled.md) and [Arrays](epoxy-arrays.md) – to add built-in change detection and access tracking. Epoxy also provides tools to automatically respond to changes in these data structures, giving you the flexibility to build whatever kind of reactive app you want.
 
 ```typescript
