@@ -8,7 +8,7 @@ description: >-
 
 ## Computed Values
 
-`computed()` is probably the most straightforward of the Epoxy runners. It outputs an observable whose value updates whenever any of the dependencies change \(where dependencies here means 'any value from an Epoxy data structure that was accessed while calculating the value\).
+`computed()` is probably the most straightforward of the Epoxy runners. It outputs an observable whose value updates whenever any of the dependencies change \(where dependencies here means 'any property of an Epoxy data structure that was accessed while calculating the value\).
 
 ```typescript
 import {makeListenable, computed} from 'epoxyjs';
