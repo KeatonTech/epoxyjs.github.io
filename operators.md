@@ -136,7 +136,7 @@ Note that unlike map\(\), the filter function does not support computed filter f
 More operators are planned for the near future, including:
 
 | sort\(\) | Produces a sorted version of the input array. _Arrays only._ |
-| --- | --- | --- | --- |
+| :--- | :--- |
 | derivedLeft\(\) | Similar to map\(\) but each item gets the complete list of all items before it, and is re-computed whenever any item before it in the list is updated. _Arrays only._ |
 | derivedRight\(\) | Same as derivedLeft\(\) but items get the list of all items _after_ them. _Arrays only._ |
 | batched\(\) | Instead of mutations getting applied immediately, batched data structures will only allow themselves to be changed when the update\(\) function is called, at which point all of the pending mutations will be optimized and applied all at once. |

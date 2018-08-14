@@ -68,7 +68,7 @@ The [Epoxy Objects](untitled.md) and [Epoxy Arrays](epoxy-arrays.md) pages are g
 ## Javascript Support
 
 | Node | **6.4.0+** |
-| --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Chrome \(Desktop + Mobile\) | **49+** |
 | Firefox  \(Desktop + Mobile\) | **18+** |
 | Edge \(Desktop + Mobile\) | **12+** |
