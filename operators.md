@@ -131,15 +131,26 @@ expect(filtered).eqls({
 
 Note that unlike map\(\), the filter function does not support computed filter functions, so if your filter function relies on Epoxy values it will not automatically update. This functionality might be added in the future.
 
-## In Development
+## ToObject
 
-More operators are planned for the near future, including:
+Sometimes it is useful to be able to look up items in an array in constant-time, which usually necessitates turning the array into some sort of HashMap. Epoxy doesn't yet support the actual JS Map class, but Javascript objects are usually HashMaps under the hood \(sometimes they're tree maps but those are pretty good too\). Like all the other operators, this not only converts a listenable array to an object but also keeps it up to date as the array changes.
 
-| sort\(\) | Produces a sorted version of the input array. _Arrays only._ |
-| :--- | :--- |
-| derivedLeft\(\) | Similar to map\(\) but each item gets the complete list of all items before it, and is re-computed whenever any item before it in the list is updated. _Arrays only._ |
-| derivedRight\(\) | Same as derivedLeft\(\) but items get the list of all items _after_ them. _Arrays only._ |
-| batched\(\) | Instead of mutations getting applied immediately, batched data structures will only allow themselves to be changed when the update\(\) function is called, at which point all of the pending mutations will be optimized and applied all at once. |
+```typescript
+const messages = makeListenable([
+    {id: 'message1', text: 'Hello'},
+    {id: 'message2', text: 'Hello to you too!'},
+    ...
+]);
+
+const messagesById = toObject(messages, (message) => message.id);
+expect(messagesById).eqls({
+    "message1": {id: 'message1', text: 'Hello'},
+    "message2": {id: 'message2', text: 'Hello to you too!'},
+    ...
+});
+```
+
+The second argument of the toObject function is a method that generates a key for the given array row, usually by pulling some sort of unique key field out of an object. Note that keys **must be unique**. Trying to insert an item into an array that has the same key as an existing item will result in an error.
 
 
 

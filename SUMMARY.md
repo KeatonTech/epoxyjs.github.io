@@ -6,5 +6,6 @@
 * [Runners](runners.md)
 * [Transactions & Batching](transactions-and-batching.md)
 * [Operators](operators.md)
+* [Epoxy DOM](dom-binding.md)
 * [Extras](extras.md)
 
