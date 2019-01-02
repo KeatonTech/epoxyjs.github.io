@@ -118,7 +118,9 @@ class MyButtonComponent extends EpoxyDomComponent {
         title: string,
         label: string,
     }>) {
-        super('button')
+        super('button');
+        
+        this
             .bindAttribute('aria-label', () => inputs.label)
             .bindInnerHtml(() => inputs.title)
     }
